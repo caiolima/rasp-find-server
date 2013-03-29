@@ -4,10 +4,10 @@
 .cpp.o:	$*.h
 	g++	-c $*.cpp
 
-all:	rasp-find
+all:	rasp-find-server
 
-rasp-find: main.o
-	g++ -o $@ $^
+rasp-find-server: main.o
+	gcc -o $@ $^
 
 clean:
 	rm *.o *.*~ rasp-find-server
